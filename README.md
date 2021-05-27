@@ -32,8 +32,8 @@ The setup consists of 3 files:
 1) Run the run-airflow.sh file to start all the required containers
 2) Access the webserver at localhost:5884
 3) Login using credentials:
-    USERNAME : airflow
-    PASSWORD : airflow
+   - USERNAME : airflow
+   - PASSWORD : airflow
 4) Activate the dag name data_transfer & run it.
 
 ## Inspecting database
