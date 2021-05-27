@@ -39,13 +39,13 @@ The setup consists of 3 files:
 ## Inspecting database
 
 **To check source**
-Access psql shell using command: psql -h localhost -p 5442 -U postgres
-On prompt enter password : Glints2021
-Switch to database: \c source_db;
-check table: select * from source_table;
+- Access psql shell using command: psql -h localhost -p 5442 -U postgres
+- On prompt enter password : Glints2021
+- Switch to database: \c source_db;
+- check table: select * from source_table;
 
 **To check target**
-Access psql shell using command: psql -h localhost -p 5443 -U postgres
-On prompt enter password : Glints2021
-Switch to database: \c target_db;
-check table: select * from target_table;
+- Access psql shell using command: psql -h localhost -p 5443 -U postgres
+- On prompt enter password : Glints2021
+- Switch to database: \c target_db;
+- check table: select * from target_table;
