@@ -4,17 +4,18 @@ A key part of a Data Engineer’s responsibilities is maintaining the serviceabi
 In this technical assessment, you are required to submit the setup for the data pipeline of a basic data warehouse using Docker and Apache Airflow.
 
 Your final setup should include the following:
+- A source postgres database (Database X)
+- A target postgres database (Database Y, which is not the same Docker container as Database X)
+- Apache Airflow with webserver accessible from localhost:5884
+- A Directed Acyclic Graph (DAG) for transferring the content of Source Database X to Target Database Y
+- README.md detailing the usage of your submission
 
-A source postgres database (Database X)
-A target postgres database (Database Y, which is not the same Docker container as Database X)
-Apache Airflow with webserver accessible from localhost:5884
-A Directed Acyclic Graph (DAG) for transferring the content of Source Database X to Target Database Y
-README.md detailing the usage of your submission
 As the focus of this technical assessment is on the set up of a basic data pipeline using Airflow, the content of the table in Source Postgres Database X to be transferred can be determined by the candidate. It can be as basic as:
 
-id	creation_date	sale_value
-0	12-12-21	1000
-1	13-12-21	2000
+| id | creation_date | sale_value |
+| -- | ------------- | ---------- |
+| 0  | 12-12-21 | 1000 |
+| 1  | 13-12-21 | 2000 |
 
 ## Setup
 
@@ -37,13 +38,13 @@ The setup consists of 3 files:
 
 ## Inspecting database
 
-** To check source **
+**To check source**
 Access psql shell using command: psql -h localhost -p 5442 -U postgres
 On prompt enter password : Glints2021
 Switch to database: \c source_db;
 check table: select * from source_table;
 
-** To check target **
+**To check target**
 Access psql shell using command: psql -h localhost -p 5443 -U postgres
 On prompt enter password : Glints2021
 Switch to database: \c target_db;
